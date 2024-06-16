@@ -1,0 +1,34 @@
+
+
+.custom-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #fafafb;
+  background-color: #fafafb;
+  color: #b4b4b4;
+  box-sizing: border-box;
+  margin-top: 0.7rem;
+}
+.custom-input:focus {
+  border: 1px solid black;
+  outline: none;
+}
+.custom-input.error {
+    border: 1px solid red;
+  } 
+  .custom-input.error::placeholder {
+    color: red;
+  }
+.input-label {
+  color: #b4b4b4;
+  font-size: 0.75rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.875rem;
+}
+.required {
+  color: red;
+}

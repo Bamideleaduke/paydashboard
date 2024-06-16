@@ -1,0 +1,47 @@
+.dashboard {
+  flex-grow: 1;
+  border: 4px solid red;
+}
+
+.name-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  border-bottom: 1px solid #f5f5f5;
+}
+.name-card > p {
+  color: #99999c;
+}
+section {
+  padding: 0 3rem;
+}
+.currency {
+  display: flex;
+  align-items: center;
+}
+
+.trasaction-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.dots {
+  border: 1px solid #e2e3e5;
+  background-color: #fff;
+  padding: 9px;
+  border-radius: 12px;
+  /* margin-left: 1rem; */
+  /* width: '24px';
+  height: '24px'; */
+
+  /* color: #99999C; */
+}

@@ -1,0 +1,18 @@
+.custom-button {
+    padding: 11px 16px;
+    border-radius: 100px;
+    color: white;
+    border: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.custom-button:active {
+    background-color: #343433;
+  }
+
+  .disabled {
+    background-color: #B4B4B4;
+    cursor: not-allowed;
+  }

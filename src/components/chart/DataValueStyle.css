@@ -1,0 +1,40 @@
+
+
+.total-evaluation {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px; 
+  }
+  
+  .evaluation-item {
+    /* background-color: #f0f0f0; */
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .evaluation-item > p {
+    margin: 0;
+    color: #99999C;
+    font-size: 1rem;
+  }
+  
+  .evaluation-item h5 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #343433;
+  }
+  
+  .evaluation-item h3 span {
+    font-size: 0.8em;
+    color: #666;
+  }
+  .status {
+    font-size: 1rem;
+  }
+  .success {
+    color: #00C46C;
+  }
+  .fail {
+    color: #FF4E4E;
+  }

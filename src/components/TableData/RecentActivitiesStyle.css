@@ -1,0 +1,14 @@
+
+.activities {
+
+    border: 4px solid black;
+}
+.card-grid {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+}
+
+.title-card {
+    display: flex;
+}

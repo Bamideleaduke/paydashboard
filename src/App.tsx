@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
+import Menu from './components/menu/Menu';
+import Dashboard from './components/dashboard/Dashboard';
+import { RootState } from './utils/redux/store';
+import { useSelector } from 'react-redux';
+import AddBusinesslayout from './components/AddBusiness/AddBusinesslayout';
 
 function App() {
+
+  const showLayout = useSelector((state: RootState) => state.business.showLayout);
+  useEffect(() => {
+    if (showLayout) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [showLayout]);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <Menu/>
+  <Dashboard/>
+
+  {showLayout && <AddBusinesslayout/>}
+
+
     </div>
   );
 }

@@ -1,0 +1,55 @@
+.business {
+  border: 2px solid #f5f5f5;
+  border-radius: 12px;
+}
+.business hr {
+ width: 90%;
+ margin: 1rem auto 0;
+
+}
+.business-card {
+  /* border: 2px solid #f5f5f5; */
+  display: flex;
+  padding: 0.4rem 0.3rem;
+  /* border-radius: 12px; */
+}
+.business-info {
+  margin: 0 0.7rem;
+}
+.business-name {
+  font-size: 1rem;
+  color: #343433;
+}
+.business-id {
+  font-size: 0.75rem;
+  color: #99999c;
+  margin-top: 0.5rem;
+}
+
+.add-business {
+  /* border: 2px solid black; */
+  /* border-top: 1px solid #F5F5F5; */
+  padding: 0.4rem 0.3rem;
+  display: flex;
+  align-items: center;
+  /* margin-top: 1rem; */
+}
+
+.add-business > .plus {
+  background-color:  #fff;
+  width: 42px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.add-business > .plus > span {
+font-size: 2rem;
+color: #B4B4B4;
+font-weight: 500;
+}
+.add-business > p:nth-child(2) {
+  margin: 0 0.7rem;
+}
