@@ -1,9 +1,68 @@
-
 .card-component {
-    border: 2px solid red;
+  /* border: 2px solid red; */
+  border-right: 1px solid #f5f5f5;
+  padding: 2rem;
 }
 
 .card-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+hr {
+  margin: 1rem 0;
+}
+.card-detail {
+  margin-left: 0.7rem;
+}
+.card-detail p {
+  color: #343433;
+}
+.card-detail span {
+  color: #99999c;
+  font-size: 0.7rem;
+}
+.one {
+  display: flex;
+  align-items: center;
+}
+.three {
+  font-size: 1rem;
+  color: #343433;
+}
+
+.locked {
+  color: #f29100;
+  border: 1px solid #f29100;
+  padding: 0.2rem;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+
+.card-grid .active {
+  color: #00c46c;
+  border: 1px solid #00c46c;
+  padding: 0.2rem;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-header h3 {
+  font-family: 'Ojah Display', sans-serif;
+  font-weight: 400;
+  color: #343433;
+}
+.card-header button {
+  padding: 0.2rem;
+  background-color: #fff;
+  border: 1px solid #e2e3e5;
+  border-radius: 10px;
+  padding: 6px 8px;
+  color: #343433;
+}
+.card-header button img {
+  margin-left: 0.5rem;
 }

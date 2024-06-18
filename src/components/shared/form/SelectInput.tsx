@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { useField } from 'formik';
 import "./SelectInputStyle.css"
-import Gt from "../../../Assets/icons/gt.svg"
+import Gt from "../../../Assets/icons/downArrow.svg"
 
 
 interface SelectInputProps {
   label: string;
   name: string;
-  options: { value: string, label: string }[];
+  icon?:boolean;
+  options: { value: string, label: string,  icon?:string; }[];
   placeholder?: string;
   required?:boolean;
 }
-const SelectInput: React.FC<SelectInputProps> = ({ label, name, options, placeholder,required }) => {
+const SelectInput: React.FC<SelectInputProps> = ({ label, name, options, placeholder,required,icon }) => {
     const [field, meta, helpers] = useField(name);
     const [isOpen, setIsOpen] = useState(false);
   
@@ -32,7 +33,12 @@ const SelectInput: React.FC<SelectInputProps> = ({ label, name, options, placeho
           className={`custom-select ${meta.touched && meta.error ? 'error' : ''} ${isOpen ? 'active' : ''}`}
           onClick={toggleDropdown}
         >
-          {field.value ? options.find(option => option.value === field.value)?.label : placeholder}
+          {/* {field.value ? options.find(option => option.value === field.value)?.label : placeholder} */}
+          {field.value ? (
+            <span className="selected-value"> {icon && <img src={options.find(option => option.value === field.value)?.icon} alt="icon" />} {options.find(option => option.value === field.value)?.label}</span>
+          ) : (
+            <span className="placeholder">{placeholder}</span>
+          )}
           <span className="dropdown-icon">
             <img src={Gt} alt="next" />
           </span>
@@ -45,6 +51,7 @@ const SelectInput: React.FC<SelectInputProps> = ({ label, name, options, placeho
                 className="dropdown-option"
                 onClick={() => handleSelect(option.value)}
               >
+               {icon &&  <img src={option?.icon} alt="icon" />}
                 {option.label}
               </div>
             ))}

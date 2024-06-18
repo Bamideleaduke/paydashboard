@@ -6,12 +6,17 @@
   border-radius: 12px;
   border: 1px solid #fafafb;
   background-color: #fafafb;
-  color: #b4b4b4;
+  color: #1F1F1E;
   box-sizing: border-box;
   margin-top: 0.7rem;
+  font-size: 1rem;
+}
+.custom-input::placeholder {
+  color: #b4b4b4;
+  font-size: 0.8rem;
 }
 .custom-input:focus {
-  border: 1px solid black;
+  border: 1px solid #1F1F1E;
   outline: none;
 }
 .custom-input.error {

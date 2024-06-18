@@ -7,8 +7,10 @@ import { useSelector } from 'react-redux';
 import AddBusinesslayout from './components/AddBusiness/AddBusinesslayout';
 
 function App() {
+  const showLayout = useSelector(
+    (state: RootState) => state.business.showLayout,
+  );
 
-  const showLayout = useSelector((state: RootState) => state.business.showLayout);
   useEffect(() => {
     if (showLayout) {
       document.body.classList.add('no-scroll');
@@ -16,15 +18,14 @@ function App() {
       document.body.classList.remove('no-scroll');
     }
   }, [showLayout]);
-  
+
   return (
     <div className="App">
-  <Menu/>
-  <Dashboard/>
+      <Menu />
 
-  {showLayout && <AddBusinesslayout/>}
+      <Dashboard />
 
-
+      {showLayout && <AddBusinesslayout />}
     </div>
   );
 }

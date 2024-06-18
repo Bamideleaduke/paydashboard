@@ -1,81 +1,99 @@
 .select-wrapper {
-    position: relative;
-    width: 100%;
-    /* max-width: 300px; */
-    margin: 1rem 0;
-  }
-  
-  .custom-select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 12px;
-    border: 1px solid #fafafb;
-    background-color: #fafafb;
-    color: #b4b4b4;
-    cursor: pointer;
-    position: relative;
-    margin-top: 0.5rem;
-    font-size: 1rem;
-  }
-  
-  .custom-select.active {
-    border: 1px solid black;
-    outline: none;
-  }
-
-  .custom-select.error {
-    border: 1px solid red;
-  } 
-
-  .dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    border-radius: 12px;
-    color: white;
-    border: 1px solid #ccc;
-    border-top: none;
-    z-index: 1000;
-    margin-top: 0.7rem;
-  }
-  
-  .dropdown-option {
-    padding: 10px;
-    cursor: pointer;
-    color: #b4b4b4;
-  }
-  
-  .dropdown-option:hover {
-    background-color: black;
-    border-radius: 12px;
-  }
-  
-  .error {
-    color: red;
-    font-size: 0.875rem;
-  }
-  
-  .label {
-    color: #b4b4b4;
-    font-size: 0.75rem;
-  }
-  
-  .dropdown-icon {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    font-size: 18px;
-    color: #333;
-  }
-  
-.required {
-    color: red;
+  position: relative;
+  width: 100%;
+  /* max-width: 300px; */
+  margin: 1rem 0;
+}
+.selected-value {
+  color: #1f1f1e;
+  display: flex;
+  align-items: center;
+}
+.selected-value img {
+  width: 14px;
+  height: 14px;
+  margin-right: 0.3rem;
+  border-radius: 100%;
+}
+.placeholder {
+  color: #b4b4b4;
+  font-size: 0.8rem;
+}
+.custom-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #fafafb;
+  background-color: #fafafb;
+  /* color: #1F1F1E; */
+  cursor: pointer;
+  position: relative;
+  margin-top: 0.5rem;
+  font-size: 1rem;
 }
 
-  
+.custom-select.active {
+  border: 1px solid #1f1f1e;
+  outline: none;
+}
 
+.custom-select.error {
+  border: 1px solid red;
+}
 
-  
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  border-radius: 12px;
+  color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  z-index: 1000;
+  margin-top: 0.7rem;
+}
+
+.dropdown-option {
+  padding: 10px;
+  cursor: pointer;
+  color: #b4b4b4;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.dropdown-option  img {
+  width: 14px;
+  height: 14px;
+  margin-right: 0.3rem;
+  border-radius: 100%;
+}
+
+.dropdown-option:hover {
+  background-color: black;
+  border-radius: 12px;
+}
+
+.error {
+  color: red;
+  font-size: 0.875rem;
+}
+
+.label {
+  color: #b4b4b4;
+  font-size: 0.75rem;
+}
+
+.dropdown-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #333;
+}
+
+.required {
+  color: red;
+}

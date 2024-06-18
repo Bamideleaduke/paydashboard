@@ -5,13 +5,15 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import SelectInput from '../shared/form/SelectInput';
 import { useDispatch } from 'react-redux';
-import { setNewBusiness , setShowLayout} from '../../../src/utils/redux/slices/businessSlice';
+import { setNewBusiness , setShowLayout, setShowAddBusiness} from '../../../src/utils/redux/slices/businessSlice';
 import InputField from '../shared/form/InputField';
+import Ng from "../../Assets/icons/nigeria.svg"
+import Globe from "../../Assets/icons/globe.svg"
 
 
 const location = [
-  { value: 'Nigerian', label: 'Nigeria' },
-  { value: 'Other Countries', label: 'Other Countries' },
+  { value: 'Nigerian', label: 'Nigeria', icon: Ng },
+  { value: 'Other Countries', label: 'Other Countries', icon: Globe },
 ];
 const industry = [
   { value: 'Financial technology', label: 'Financial technology' },
@@ -57,12 +59,15 @@ const AddBusinessForm = ({
         initialValues={initialValue}
         validationSchema={validationSchema}
         onSubmit={(values) => {
-          dispatch(setNewBusiness(values));
+          // dispatch(setNewBusiness(values));
           dispatch(setShowLayout(false));
+          dispatch(setShowAddBusiness(false));
+
+          localStorage.setItem('newBusiness', JSON.stringify(values));
+          window.location.reload();
         }}
       >
         {(formik) => {
-            console.log("formik",formik.values)
             return (
           <Form>
             <SelectInput
@@ -71,6 +76,7 @@ const AddBusinessForm = ({
               options={location}
               placeholder="Select location"
               required
+              icon
             />
             <SelectInput
               label="Business industry"

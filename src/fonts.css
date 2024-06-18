@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Ojah Display';
+    src: url('./fonts/OjahDisplay-Black.otf') format('otf');
+    font-weight: 900; 
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Ojah Display';
+    src: url('./fonts/OjahDisplay-Bold.otf') format('otf');
+    font-weight: 700; 
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Ojah Display';
+    src: url('./fonts/OjahDisplay-SemiBold.otf') format('otf');
+    font-weight: 600;
+    font-style: normal;
+  }
+  

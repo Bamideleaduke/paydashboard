@@ -1,5 +1,8 @@
 import React from 'react';
 import './CardsComponents.css';
+import DollarCard from "../../Assets/icons/dollarCard.svg"
+import NairaCard from "../../Assets/icons/nairaCard.svg"
+import Arrow from "../../Assets/icons/seeAllArrow.svg"
 
 const cardType = [
   {
@@ -42,16 +45,24 @@ const cardType = [
 const CardsComponent = () => {
   return (
     <div className='card-component'>
+      <div className='card-header'>
+        <h3>Cards</h3>
+        <button>See All <img src={Arrow} alt="see all cards" /> </button>
+      </div>
       {cardType.map((item, idx) => {
         return (
           <div key={idx * 2}>
+            <hr />
             <div className="card-grid">
-              <div className='item'>
+              <div className='item one'>
+              <img src={item.currency === "NGN" ? NairaCard : DollarCard} alt="Bank icon" className='title-card-img' />
+              <div className='card-detail'>
                 <p>{item.type}</p>
                 <span>{truncateCardNumber(item.cardNumber)}</span>
               </div>
-              <div className='item'>{item.status}</div>
-              <div className='item'>
+              </div>
+              <div className={`item two ${item.status === "locked" ? "locked" : "active"}`}>{item.status}</div>
+              <div className='item three'>
                 {item.total} {item.currency}
               </div>
             </div>

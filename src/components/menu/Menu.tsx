@@ -5,10 +5,13 @@ import './Menu.css';
 import "../../App.css"
 import { menuData } from "../../mockData"
 import Businesscard from './businessCard/Businesscard';
+import { useSelector } from 'react-redux';
+import { RootState } from '@src/utils/redux/store';
 
 
 const Menu = () => {
   const [activePage, setActivePage] = useState('Dashboard');
+  const showAddBusiness = useSelector((state: RootState) => state.business.showAddBusiness);
   const handleItemClick = (page: string) => {
 
     if (page !== "Dashboard") return;
@@ -17,7 +20,7 @@ const Menu = () => {
   return (
     <div className='side-menu'>
       <Businesscard/>
-    <menu>
+    <menu className={`${!showAddBusiness ? "more" : "less-padding" }`}>
 
       <ul id="mainMenu">
         {menuData.map((menu: any,idx:number) => {
@@ -34,7 +37,7 @@ const Menu = () => {
         })}
       </ul>
 
-      <ul className="lastMenu">
+      <ul className={`lastMenu ${!showAddBusiness ? "more-spacing" : "less" }`}>
         <Icon
           page="Settings"
           route="#"

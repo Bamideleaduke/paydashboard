@@ -1,12 +1,15 @@
 .business {
   border: 2px solid #f5f5f5;
   border-radius: 12px;
+  z-index: 10;
 }
 .business hr {
  width: 90%;
  margin: 1rem auto 0;
 
 }
+
+
 .business-card {
   /* border: 2px solid #f5f5f5; */
   display: flex;

@@ -1,6 +1,9 @@
 .title {
   font-size: 1.7rem;
   color: #343433;
+  font-family: 'Ojah Display', sans-serif;
+  font-weight: 400;
+
 }
 .submit-form {
   display: flex;

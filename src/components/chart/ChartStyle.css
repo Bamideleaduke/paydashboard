@@ -7,3 +7,46 @@ hr {
     display: grid;
     grid-template-columns: 1fr 1fr; 
 }
+.hr-2 {
+    margin: 3rem 0 0;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.money-flow {
+    background-color: #FAFAFA;
+    /* border: 2px solid red; */
+    padding: 0.1rem 0;
+    border-radius: 50px;
+    display: flex;
+    
+}
+.inflow {
+    background-color: #FFFFFF;
+    color: #343433;
+}
+.outflow {
+  color: #B4B4B4;
+}
+.inflow ,.outflow {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+.see-all > button{
+    padding: 0.2rem;
+    background-color: #fff;
+    border: 1px solid #E2E3E5;
+    border-radius: 10px;
+    padding: 9px 6px 9px 16px;
+    color: #343433;
+}
+
+.see-all > button >img {
+    margin-left: 0.4rem;
+}

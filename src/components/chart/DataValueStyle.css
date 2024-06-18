@@ -38,3 +38,6 @@
   .fail {
     color: #FF4E4E;
   }
+  .status img {
+    margin-right: 0.3rem;
+  }

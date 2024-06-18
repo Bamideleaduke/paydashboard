@@ -1,5 +1,8 @@
 import React from 'react';
 import "./DataValueStyle.css"
+import PropertiesIcon from "../../Assets/icons/propertiesIcon.svg"
+import UpArrow from "../../Assets/icons/arrowUp.svg"
+import DownArrow from "../../Assets/icons/arrowDown.svg"
 
 
 const moneyValue =[
@@ -12,10 +15,10 @@ const DataValue = () => {
     <div className='total-evaluation'>
       {
         moneyValue.map((item,idx)=>{
-            return <div className='evaluation-item'>
-                <p>{item.title}</p>
+            return <div key={idx*2} className='evaluation-item'>
+                <p>{item.title} <img src={PropertiesIcon} alt="see all cards" /></p>
                 <h5>{item.value} {item.total}</h5>
-                <span className={`status ${item.status === "success" ? "success" :"fail"}`}>{item.duration}</span>
+                <span className={`status ${item.status === "success" ? "success" :"fail"}`}><img src={item.status === "success" ? UpArrow : DownArrow} alt="see all cards" />{item.duration}</span>
             </div>
         })
       }

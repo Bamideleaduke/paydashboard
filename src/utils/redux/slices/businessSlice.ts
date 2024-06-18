@@ -10,11 +10,13 @@ interface BusinessObjectType {
 }
 interface BusinessType {
   showLayout: boolean;
+  showAddBusiness: boolean;
   newBusiness: BusinessObjectType;
 }
 
 const initialState: BusinessType = {
   showLayout: false,
+  showAddBusiness: false,
   newBusiness: {
     location: '',
     industry: '',
@@ -31,12 +33,15 @@ const businessSlice = createSlice({
     setShowLayout: (state, action: PayloadAction<boolean>) => {
       state.showLayout = action.payload;
     },
+    setShowAddBusiness: (state, action: PayloadAction<boolean>) => {
+      state.showAddBusiness = action.payload;
+    },
     setNewBusiness: (state, action: PayloadAction<BusinessObjectType>) => {
       state.newBusiness = action.payload;
     },
   },
 });
 
-export const { setShowLayout, setNewBusiness } = businessSlice.actions;
+export const { setShowLayout, setNewBusiness, setShowAddBusiness } = businessSlice.actions;
 
 export default businessSlice.reducer;

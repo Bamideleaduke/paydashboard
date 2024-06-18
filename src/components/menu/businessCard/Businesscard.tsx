@@ -3,25 +3,23 @@ import Avatar from '../../../Assets/icons/avatar.svg';
 import Info from '../../../Assets/icons/detailIcon.svg';
 import './BusinessCard.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { setShowLayout } from '../../../utils/redux/slices/businessSlice';
+import { setShowLayout, setShowAddBusiness } from '../../../utils/redux/slices/businessSlice';
 import { RootState } from '@src/utils/redux/store';
 
 const Businesscard = () => {
-  const [addBusiness, setAddBusiness] = useState(false);
-  // const [showLayout, setShowLayout] = useState(false);
+  // const [addBusiness, setAddBusiness] = useState(false);
   const dispatch = useDispatch();
   const showLayout = useSelector((state: RootState) => state.business.showLayout);
+  const showAddBusiness = useSelector((state: RootState) => state.business.showAddBusiness);
   
   let BusinessName = 'Payshiga Technology';
-  
-  
+
   const showFormLayout = () => {
     dispatch(setShowLayout(true));
   };
 
   const handleToggle = () => {
-    setAddBusiness(!addBusiness);
-    // dispatch(setShowLayout(!showLayout));
+    dispatch(setShowAddBusiness(!showAddBusiness));
   };
   return (
     <div className="business">
@@ -36,8 +34,8 @@ const Businesscard = () => {
         <img src={Info} alt="Business Details Icon" onClick={handleToggle} />
       </div>
 
-      {addBusiness  && (
-        <div>
+      {showAddBusiness  && (
+        <div className='add-business-container'>
           <hr />
 
           <div className="add-business">
