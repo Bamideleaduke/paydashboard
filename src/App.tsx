@@ -22,7 +22,6 @@ function App() {
   return (
     <div className="App">
       <Menu />
-
       <Dashboard />
 
       {showLayout && <AddBusinesslayout />}

@@ -1,4 +1,4 @@
-// src/features/layoutSlice.ts
+
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface BusinessObjectType {

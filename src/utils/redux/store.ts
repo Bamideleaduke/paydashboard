@@ -1,4 +1,4 @@
-// src/app/store.ts
+
 import { configureStore } from '@reduxjs/toolkit';
 import businessSlice from './slices/businessSlice';
 
@@ -6,7 +6,7 @@ import businessSlice from './slices/businessSlice';
 const store = configureStore({
   reducer: {
     business: businessSlice,
-    // Add other reducers here if needed
+  
   },
 });
 

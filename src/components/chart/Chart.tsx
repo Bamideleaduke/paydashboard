@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import DataValue from './DataValue';
 import "./ChartStyle.css"
 import CardsComponent from '../TableData/CardsComponent';

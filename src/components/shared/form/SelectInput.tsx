@@ -33,7 +33,6 @@ const SelectInput: React.FC<SelectInputProps> = ({ label, name, options, placeho
           className={`custom-select ${meta.touched && meta.error ? 'error' : ''} ${isOpen ? 'active' : ''}`}
           onClick={toggleDropdown}
         >
-          {/* {field.value ? options.find(option => option.value === field.value)?.label : placeholder} */}
           {field.value ? (
             <span className="selected-value"> {icon && <img src={options.find(option => option.value === field.value)?.icon} alt="icon" />} {options.find(option => option.value === field.value)?.label}</span>
           ) : (
